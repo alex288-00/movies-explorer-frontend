@@ -1,0 +1,9 @@
+@import url(../../vendor/normalize.css);
+@import url(../../vendor/fonts/fonts.css);
+
+.App {
+  margin: 0 auto;
+  font-family: "inter", "Arial", sans-serif;
+  text-rendering: optimizeLegibility;
+  min-height: 100vh;
+}

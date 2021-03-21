@@ -1,0 +1,62 @@
+.element {
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #222222;
+}
+
+.element__title-min {
+  display: flex;
+  justify-content: space-between;
+  align-self: normal;
+  padding: 0px 18px 0;
+}
+
+.element__title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: #ffffff;
+}
+
+.element__min {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  color: #8b8b8b;
+}
+
+.element__img {
+  width: 100%;
+  height: 200px;
+  display: block;
+}
+
+.element__button {
+  width: 100px;
+  height: 29px;
+  margin: 18px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  background: #313131;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 11px;
+  cursor: pointer;
+  position: relative;
+}
+
+.element__button_selected {
+  background: #ee3465;
+}
+
+.element__button:hover {
+  opacity: 0.6;
+  transition: linear 0.4s;
+}

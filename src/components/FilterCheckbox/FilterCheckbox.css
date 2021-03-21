@@ -1,0 +1,50 @@
+.filter {
+  margin-top: 26px;
+  display: flex;
+  border-bottom: 1px solid #424242;
+  padding-bottom: 43px;
+}
+
+.filter__input {
+  display: inline-block;
+  width: 36px;
+  height: 20px;
+  appearance: none;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  margin: 0 14px 0 0;
+  background: #424242;
+  cursor: pointer;
+  position: relative;
+  transition-duration: 300ms;
+}
+
+.filter__input::after {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #ffffff;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  content: "";
+  border-radius: 50%;
+  transition-duration: 300ms;
+}
+
+.filter__input:checked {
+  background-color: #3ddc84;
+}
+
+.filter__input:checked::after {
+  left: 23px;
+}
+
+.filter__label {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  color: #ffffff;
+}

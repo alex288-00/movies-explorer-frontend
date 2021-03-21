@@ -1,0 +1,141 @@
+.about-project {
+  min-height: 608px;
+  background-color: #202020;
+  position: relative;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.about-project__title {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 27px;
+  color: #ffffff;
+  margin: 0;
+  padding-top: 110px;
+  padding-bottom: 23px;
+  border-bottom: 1px solid #dadada;
+}
+
+.about-project__info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-project__info-container {
+  width: 550px;
+}
+
+.about-project__info-title {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  margin: 70px 0 0;
+}
+
+.about-project__info-subtitle {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  margin: 26px 0 0;
+}
+
+.about-project__week {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: repeat(2, 36px);
+  text-align: center;
+  margin-top: 110px;
+}
+
+.week-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.week-container__line {
+  height: 34px;
+  background-color: #3ddc84;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.week-container__line_4 {
+  background-color: #303030;
+}
+
+.week-container__text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+}
+
+.week-container__text_4 {
+  color: #ffffff;
+}
+
+.week-container__text_subtitle {
+  color: #8b8b8b;
+}
+
+@media screen and (max-width: 768px) {
+  .about-project {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .about-project__title {
+    padding-top: 110px;
+    padding-bottom: 23px;
+  }
+
+  .about-project__info-container {
+    width: 100%;
+  }
+
+  .about-project__info-subtitle {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+@media screen and (max-width: 504px) {
+  .about-project {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .about-project__title {
+    padding-top: 70px;
+    padding-bottom: 28px;
+  }
+
+  .about-project__info {
+    flex-direction: column;
+  }
+
+  .week-container__text {
+    font-size: 11px;
+    line-height: 13px;
+  }
+
+  .about-project__info-title {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .about-project__week {
+    grid-template-columns: 35% 65%;
+    text-align: center;
+    margin-top: 60px;
+    padding-bottom: 70px;
+  }
+}
