@@ -33,15 +33,12 @@
   color: #ffffff;
   font-size: 22px;
   cursor: pointer;
+  outline: none;
 }
 
-.burger-menu__close-btn:hover {
+.burger-navigation__close:hover {
   opacity: 0.6;
   transition: linear 0.4s;
-}
-
-.burger-menu__close-btn:focus {
-  outline: none;
 }
 
 .burger-navigation__container {
