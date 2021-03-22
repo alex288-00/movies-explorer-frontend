@@ -1,0 +1,128 @@
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.burger-button {
+  border: none;
+  background: none;
+  padding: 0;
+  outline: none;
+  display: none;
+  color: #ffffff;
+  font-size: 35px;
+}
+
+.navigation__list-item {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.navigation__item {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.navigation__link {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.navigation__link_account {
+  margin-left: 50px;
+}
+
+.navigation__button-account {
+  width: 30px;
+  background: #313131;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 30px;
+  border: none;
+  border-radius: 6px;
+  background-image: url(../../images/account.svg);
+  margin-left: 13px;
+}
+
+.navigation__link:hover {
+  opacity: 0.6;
+  transition: linear 0.4s;
+}
+
+.navigation__item-account {
+  display: flex;
+  align-items: center;
+}
+
+.nav__link_main {
+  visibility: hidden;
+}
+
+.navigation__image-account {
+  margin-left: 50px;
+}
+
+.navigation__image-account:hover {
+  opacity: 0.6;
+  transition: linear 0.4s;
+}
+
+.navigation__button-signin {
+  min-width: 76px;
+  min-height: 32px;
+  background-color: #3ddc84;
+  border-radius: 3px;
+  border: none;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  text-decoration: none;
+  color: #000000;
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+.navigation__button-signin:hover {
+  opacity: 0.6;
+  transition: linear 0.4s;
+}
+
+@media screen and (max-width: 768px) {
+  .navigation {
+    display: none;
+  }
+
+  .burger-button {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .navigation__link {
+    font-size: 10px;
+    line-height: 16px;
+  }
+  .navigation__button-signin {
+    min-width: 54px;
+    min-height: 26px;
+    font-size: 10px;
+    line-height: 16px;
+  }
+}
