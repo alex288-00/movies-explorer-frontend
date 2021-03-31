@@ -3,15 +3,40 @@ import Header from "../Header/Header";
 import SearchForm from "../SearchForm/SearchForm";
 import MoviesCardList from "../MoviesCardList/MoviesCardList";
 import Footer from "../Footer/Footer";
-import moviesList from "../../utils/moviesList";
+import { useEffect } from "react";
 
-function Movies() {
+function Movies({
+  onSearchMovie,
+  onShortFilmCheck,
+  onFilterCheckBox,
+  shortFilm,
+  movie,
+  errorMassage,
+  preloader,
+  handleAddMovie,
+  handleDeleteMovie,
+  getSaveMovie,
+  isLogged,
+}) {
+  useEffect(() => {
+    getSaveMovie();
+  }, []);
+
   return (
     <>
-      <Header movieHeader={"header_movie"} isLogged={true} />
+      <Header movieHeader={"header_movie"} isLogged={isLogged} />
       <section className="movies">
-        <SearchForm />
-        <MoviesCardList data={moviesList} />
+        <SearchForm
+          onSearchMovie={onSearchMovie}
+          filterCheckBox={onShortFilmCheck}
+        />
+        <MoviesCardList
+          data={shortFilm ? onFilterCheckBox(movie) : movie}
+          errorMassage={errorMassage}
+          preloader={preloader}
+          handleAddMovie={handleAddMovie}
+          handleDeleteMovie={handleDeleteMovie}
+        />
         <Footer />
       </section>
     </>

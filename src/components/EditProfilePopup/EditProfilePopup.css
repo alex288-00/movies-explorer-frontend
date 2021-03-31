@@ -51,6 +51,7 @@
   color: #ffffff;
   font-size: 22px;
   cursor: pointer;
+  outline: none;
 }
 
 .popup__input {
@@ -63,6 +64,16 @@
 
 .popup__input:last-of-type {
   margin-bottom: 0;
+}
+
+.popup__text-validation {
+  font-size: 12px;
+  color: #ee3465;
+}
+
+.popup__text-validation_data {
+  font-size: 16px;
+  text-align: center;
 }
 
 .popup__button {
@@ -85,7 +96,15 @@
   transition: linear 0.4s;
 }
 
-.popup__close {
+.popup__button_disable {
+  opacity: 0.4;
+}
+
+.popup__button_disable:hover {
+  opacity: 0.4;
+}
+
+.popup__close:hover {
   opacity: 0.6;
   transition: linear 0.4s;
 }

@@ -25,16 +25,20 @@
   color: #ffffff;
 }
 
-.not-found__link {
+.not-found__button {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 17px;
   color: #4285f4;
   margin-top: 184px;
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
 }
 
-.not-found__link:hover {
+.not-found__button:hover {
   opacity: 0.6;
   transition: linear 0.4s;
 }

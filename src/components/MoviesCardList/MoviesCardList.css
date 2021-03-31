@@ -3,7 +3,7 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, 360px);
-  grid-template-rows: repeat(auto-fit, 319px);
+  grid-template-rows: repeat(auto-fit, 333px);
   grid-gap: 28px 32px;
   justify-content: center;
 }
@@ -12,6 +12,12 @@
   display: flex;
   justify-content: center;
   margin: 50px 0 0;
+}
+
+.elements__not-found {
+  text-align: center;
+  color: #ffffff;
+  font-size: 20px;
 }
 
 .elements__another-button {
