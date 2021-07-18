@@ -5,10 +5,10 @@ import Techs from "../Techs/Techs";
 import AboutMe from "../AboutMe/AboutMe";
 import Footer from "../Footer/Footer";
 
-function Main() {
+function Main({isLogged}) {
   return (
     <main className="content">
-      <Header isLogged={false} />
+      <Header isLogged={isLogged} />
       <Promo />
       <AboutProject />
       <Techs />

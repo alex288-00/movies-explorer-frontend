@@ -1,11 +1,23 @@
 import "./Register.css";
 import logo from "../../images/logo.svg";
 import { Link } from "react-router-dom";
+import ValidationForm from "../ValidationForm/ValidationForm";
 
-function Register() {
+function Register({ onRegister }) {
+  const { values, errors, isValidity, handleChange } = ValidationForm();
+
+  function handleSubmit(evt) {
+    evt.preventDefault();
+    onRegister(values.name, values.email, values.password);
+  }
+
   return (
     <div className="register">
-      <form className="form popup__form_login-register">
+      <form
+        className="form popup__form_login-register"
+        onSubmit={handleSubmit}
+        noValidate
+      >
         <Link to="/">
           <img src={logo} alt="Логотип"></img>
         </Link>
@@ -19,8 +31,13 @@ function Register() {
           name="name"
           type="text"
           placeholder="Имя"
+          minLength="2"
+          maxLength="30"
           required
+          onChange={handleChange}
+          value={values.name}
         />
+        <span className="form__text-validation">{errors.name}</span>
         <label className="form__label">E-mail</label>
         <input
           className="form__input popup__input_login-register"
@@ -29,7 +46,10 @@ function Register() {
           type="email"
           placeholder="E-mail"
           required
+          onChange={handleChange}
+          value={values.email}
         />
+        <span className="form__text-validation">{errors.email}</span>
         <label className="form__label">Пароль</label>
         <input
           className="form__input popup__input_login-register"
@@ -37,12 +57,18 @@ function Register() {
           name="password"
           type="password"
           placeholder="Пароль"
+          minLength="5"
           required
+          onChange={handleChange}
+          value={values.password}
         />
-
+        <span className="form__text-validation">{errors.password}</span>
         <button
           type="submit"
-          className="form__button popup__button_login-register"
+          className={`form__button ${
+            !isValidity ? "form__button_disabled" : ""
+          }`}
+          disabled={!isValidity}
         >
           Зарегистрироваться
         </button>
